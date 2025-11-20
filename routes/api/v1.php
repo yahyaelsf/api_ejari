@@ -45,7 +45,7 @@ Route::group(['prefix' => ''], function () {
     Route::group(['middleware' => 'auth:sanctum'], function () {
 
         Route::get('categories', [GeneralContrller::class, 'categoris']);
-        Route::get('user_type', [GeneralContrller::class, 'selectUserType']);
+        Route::post('user_type', [GeneralContrller::class, 'selectUserType']);
         Route::get('profile', [GeneralContrller::class, 'profile']);
         Route::post('update_profile', [GeneralContrller::class, 'update_profile']);
         // Route::post('change_password', [GeneralContrller::class, 'change_password']);
