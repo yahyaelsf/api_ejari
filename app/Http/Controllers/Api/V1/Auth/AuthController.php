@@ -58,10 +58,34 @@ class AuthController extends ApiBaseController
         return $this->successResponse(__('alerts.successfully_registered'), new UserResource($user),'user');
 
     }
-    public function login(LoginRequest $request){
+    // public function login(LoginRequest $request){
+    //     $user = TUser::where('s_email', $request->get('s_email'))->orWhere('s_mobile', $request->get('s_mobile'))->first();
+    //             return Hash::check($request->get('s_password'), $user->s_password);
+    //     if (Hash::check($request->get('s_password'), $user->s_password)) {
+    //         $token = $user->createToken('login');
+    //         $user['s_access_token'] = $token->plainTextToken;
+    //         $fcm_token = $request->header('Fcm-Token');
+    //         $user_token = DeviceToken::where('fk_i_user_id',$user->pk_i_id)->where('token',$fcm_token)->first();
+    //         if(!$user_token){
+    //             $device_token = new DeviceToken();
+    //             $device_token->fk_i_user_id = $user->pk_i_id;
+    //             $device_token->token = $fcm_token;
+    //             $device_token->save();
+    //         }
+    //         return $this->setSuccess(__('alerts.successfully_logged_in'))
+    //         ->addResource(new UserResource($user), 'user')->getResponse();
+    //     } else {
+    //         return $this->failResponse(__('alerts.failed_to_login'));
+    //     }
+    // }
+        public function login(LoginRequest $request){
         $user = TUser::where('s_email', $request->get('s_email'))->orWhere('s_mobile', $request->get('s_mobile'))->first();
-                return Hash::check($request->get('s_password'), $user->s_password);
-        if (Hash::check($request->get('s_password'), $user->s_password)) {
+        $credentials = [
+            's_mobile' => $request->s_mobile,
+            'password' => $request->s_password
+        ];
+        // Hash::check($request->s_password, $user->s_password)
+        if (Auth::attempt($credentials)) {
             $token = $user->createToken('login');
             $user['s_access_token'] = $token->plainTextToken;
             $fcm_token = $request->header('Fcm-Token');
