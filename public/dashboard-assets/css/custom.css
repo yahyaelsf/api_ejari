@@ -1,0 +1,45 @@
+body, html {
+    font-family: 'Cairo', sans-serif;
+    font-weight: 400;
+}
+
+.validation-errors {
+    padding: 10px 15px;
+    border-right: 1px solid red;
+    margin-bottom: 21px;
+    background: #fd397a1a;
+}
+
+
+.validation-errors ul {
+    margin-bottom: 0;
+}
+
+.validation-errors h6 {
+    color: red;
+}
+
+
+input.datepicker {
+    width: 100% !important;
+}
+
+.multiple-select {
+    width: 100%;
+}
+
+
+.kt-widget.kt-widget--user-profile-3 .kt-widget__top .kt-widget__media img {
+    width: 200px;
+    border-radius: 8px;
+}
+
+.kt-aside-menu .kt-menu__nav > .kt-menu__item:not(.kt-menu__item--parent):not(.kt-menu__item--open):not(.kt-menu__item--here):not(.kt-menu__item--active):hover > .kt-menu__heading .kt-menu__link-icon, .kt-aside-menu .kt-menu__nav > .kt-menu__item:not(.kt-menu__item--parent):not(.kt-menu__item--open):not(.kt-menu__item--here):not(.kt-menu__item--active):hover > .kt-menu__link .kt-menu__link-icon {
+    color: #f90000 !important;
+}
+
+.modal-dialog-scrollable .modal-body {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+}
+

@@ -1,0 +1,33 @@
+<?php
+
+
+return [
+    'add_new' => 'إضافة جديد',
+    'save' => 'حفظ',
+    'view' => 'رؤية',
+    'close' => 'إغلاق',
+    'logout' => 'تسجيل خروج',
+    'send' => 'إرسال',
+    'Export'=>'تصدير',
+    'Import'=>'استيراد',
+    'add_answer'=>'اضافة إجابة',
+    'edit' => 'تعديل',
+    'delete' => 'حذف',
+    'start_lesson' => 'إبدأ الدرس',
+    'join_lesson' => 'انضمام للدرس',
+    'create_quiz' => 'انشاء اختبار',
+    'start_quiz' => 'إبدأ اختبار',
+    'edit_quiz' => 'تعديل الإختبار',
+    'confirm' => 'تأكيد',
+    'generate_classes' => 'توليد الحصص',
+    'search' => 'بحث',
+    'reset' => 'تفريغ',
+    'download' => 'تحميل',
+    'archive' => 'الأرشيف',
+    'export' => 'تصدير',
+    'export_excel' =>   'تصدير Excel',
+    'save_and_start_lesson' => 'حفظ و إبدأ الدرس',
+    'resync-video' => 'مزامنة الفيديو',
+    'join' => 'انضمام',
+    'view_video' => 'مشاهدة الفيديو',
+];
